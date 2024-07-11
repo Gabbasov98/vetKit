@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="services.html" style="display: block; margin-bottom: 20px;">
+            услуги
+        </a>
+        <a href="service-item.html" style="display: block; margin-bottom: 20px;">
+            Стр_услуги
+        </a>
+        <a href="doctors.html" style="display: block; margin-bottom: 20px;">
+            Специалсисты
+        </a>
+        <a href="doctor-item.html" style="display: block; margin-bottom: 20px;">
+            Страница специалсиста
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О нас
+        </a>
+        <a href="info.html" style="display: block; margin-bottom: 20px;">
+            инфо
+        </a>
+        <a href="vacancies.html" style="display: block; margin-bottom: 20px;">
+            Вакансии
+        </a>
+        <a href="article.html" style="display: block; margin-bottom: 20px;">
+            статья
+        </a>
+        <a href="reviews.html" style="display: block; margin-bottom: 20px;">
+            Отзывы
+        </a>
+        <a href="prices.html" style="display: block; margin-bottom: 20px;">
+            Цены
+        </a>
+        <a href="appointment.html" style="display: block; margin-bottom: 20px;">
+            Запись на приём
+        </a>
+        <a href="appointment2.html" style="display: block; margin-bottom: 20px;">
+            Запись на приём 2
+        </a>
+        <a href="timetable.html" style="display: block; margin-bottom: 20px;">
+            Расписание
+        </a>
+
+
+
+
+        <button data-modal="callModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Заказать звонок
+        </button>
+        <button data-modal="thankModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Спасибо
+        </button>
+        <button data-modal="reqModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Записатсься на приём
+        </button>
+        <button data-modal="thankModal2" style="border: 2px solid #000;margin-bottom: 20px;">
+            Вы записаны
+        </button>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="modal" id="callModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__top">
+                <div class="modal__title">
+                    Заказать звонок
+                </div>
+                <div class="modal__desc">
+                    Укажите ваше имя и телефон и мы позвоним вам в течении 10 минут
+                </div>
+                <button class="close-btn _close-modal">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="1.41406" width="18" height="2" transform="rotate(135 15 1.41406)" fill="black" />
+                        <rect width="18" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15 12.7266)" fill="black" />
+                    </svg>
+                </button>
+            </div>
+            <form action="" class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="fg">
+                        <input type="text" placeholder="Ваш телефон">
+                    </div>
+                </div>
+                <button class="modal-form__btn m-btn m-btn-gray-outline">
+                    <span>Записаться на приём</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal thank-modal" id="thankModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__top">
+                <button class="close-btn _close-modal">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="1.41406" width="18" height="2" transform="rotate(135 15 1.41406)" fill="black" />
+                        <rect width="18" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15 12.7266)" fill="black" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal__title">
+                Спасибо, ваша заявка отправлена
+            </div>
+            <button class="thank-modal__btn _close-modal m-btn m-btn-gray-outline">
+                <span>Закрыть</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal req-modal" id="reqModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__top">
+                <div class="modal__title">
+                    Записаться на приём
+                </div>
+                <div class="modal__desc">
+                    Администратор, возможно, будет звонить Вам по телефону для уточнения информации.
+                </div>
+                <button class="close-btn _close-modal">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="1.41406" width="18" height="2" transform="rotate(135 15 1.41406)" fill="black" />
+                        <rect width="18" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 15 12.7266)" fill="black" />
+                    </svg>
+                </button>
+            </div>
+            <form action="" class="consult-form2">
+                <div class="consult-form2__fields">
+                    <div class="fg">
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="fg">
+                        <input type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="fg _full">
+                        <textarea placeholder="Причина обращения"></textarea>
+                    </div>
+                </div>
+                <div class="m-check">
+                    <input checked type="checkbox">
+                    <label>
+                        <span>
+                            Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+                <div class="consult-form2__nav">
+                    <button class="consult-form2__btn m-btn m-btn-gray-outline">
+                        <span>Записаться на приём</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal thank-modal thank-modal2" id="thankModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__title">
+                Вы записаны
+            </div>
+            <div class="modal__desc">
+                Вы записаны к терапевту 26 марта в 19:00 часов
+            </div>
+            <button class="thank-modal__btn _close-modal m-btn m-btn-gray-outline">
+                <span>Спасибо</span>
+            </button>
+        </div>
+    </div>
+
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
